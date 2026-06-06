@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Local Delivery Mundra</title>
 
+<link rel="icon" href="logo.png">
+
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial,sans-serif;
-scroll-behavior:smooth;
 }
 
 body{
@@ -21,64 +22,76 @@ color:#333;
 
 header{
 background:#fff;
-padding:15px 30px;
+padding:12px 20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 2px 10px rgba(0,0,0,.1);
 position:sticky;
 top:0;
 z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
 }
 
 .logo img{
-height:60px;
+height:55px;
+}
+
+.logo h2{
+font-size:20px;
+color:#007bff;
 }
 
 nav a{
 text-decoration:none;
-margin-left:20px;
-font-weight:bold;
 color:#333;
+margin-left:15px;
+font-weight:bold;
+font-size:14px;
 }
 
 .hero{
-background:linear-gradient(135deg,#007BFF,#00C853);
-color:white;
+background:linear-gradient(135deg,#00c6ff,#0072ff);
+color:#fff;
+padding:90px 20px;
 text-align:center;
-padding:100px 20px;
 }
 
 .hero h1{
-font-size:48px;
+font-size:42px;
 margin-bottom:15px;
 }
 
 .hero p{
-font-size:20px;
+font-size:18px;
 margin-bottom:25px;
 }
 
 .btn{
 display:inline-block;
-padding:14px 28px;
-background:white;
-color:#007BFF;
-border-radius:30px;
+padding:14px 30px;
+background:#fff;
+color:#0072ff;
 text-decoration:none;
 font-weight:bold;
+border-radius:30px;
 }
 
 .section{
-padding:70px 20px;
+padding:60px 20px;
 max-width:1200px;
 margin:auto;
 }
 
 .section-title{
 text-align:center;
-margin-bottom:40px;
-font-size:35px;
+font-size:34px;
+margin-bottom:30px;
 }
 
 .grid{
@@ -88,19 +101,24 @@ gap:20px;
 }
 
 .card{
-background:white;
+background:#fff;
 padding:25px;
 border-radius:15px;
 box-shadow:0 4px 12px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 .card h3{
+color:#0072ff;
 margin-bottom:10px;
-color:#007BFF;
 }
 
 form{
-background:white;
+background:#fff;
 padding:25px;
 border-radius:15px;
 box-shadow:0 4px 12px rgba(0,0,0,.08);
@@ -115,8 +133,8 @@ border-radius:8px;
 }
 
 button{
-background:#007BFF;
-color:white;
+background:#0072ff;
+color:#fff;
 padding:12px 25px;
 border:none;
 border-radius:8px;
@@ -127,57 +145,89 @@ button:hover{
 opacity:.9;
 }
 
-.about{
-background:white;
+.info-box{
+background:#fff;
+padding:25px;
 border-radius:15px;
-padding:30px;
 box-shadow:0 4px 12px rgba(0,0,0,.08);
 }
 
 footer{
-background:#222;
-color:white;
+background:#111;
+color:#fff;
 text-align:center;
-padding:25px;
-margin-top:50px;
+padding:30px;
 }
 
 .whatsapp{
 position:fixed;
-right:20px;
+right:15px;
 bottom:20px;
 background:#25D366;
 color:white;
-padding:15px 20px;
+padding:14px 18px;
 border-radius:50px;
 text-decoration:none;
 font-weight:bold;
-box-shadow:0 5px 15px rgba(0,0,0,.3);
+z-index:999;
+}
+
+.call{
+position:fixed;
+left:15px;
+bottom:20px;
+background:#007bff;
+color:white;
+padding:14px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+z-index:999;
+}
+
+.bottom-nav{
+display:none;
 }
 
 @media(max-width:768px){
-header{
-flex-direction:column;
-}
+
 nav{
-margin-top:10px;
+display:none;
 }
-nav a{
-margin:5px;
-display:inline-block;
-}
+
 .hero h1{
-font-size:34px;
+font-size:32px;
+}
+
+.bottom-nav{
+display:flex;
+justify-content:space-around;
+align-items:center;
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#fff;
+padding:10px;
+box-shadow:0 -2px 10px rgba(0,0,0,.1);
+z-index:999;
+}
+
+.bottom-nav a{
+text-decoration:none;
+color:#333;
+font-size:13px;
+font-weight:bold;
 }
 }
 </style>
 </head>
-
 <body>
 
 <header>
 <div class="logo">
-<img src="logo.png" alt="Local Delivery Mundra">
+<img src="logo.png" alt="Logo">
+<h2>Local Delivery Mundra</h2>
 </div>
 
 <nav>
@@ -191,9 +241,9 @@ font-size:34px;
 </header>
 
 <section class="hero" id="home">
-<h1>Local Delivery Mundra</h1>
-<p>Fast • Reliable • Trusted Delivery Service in Mundra</p>
-<a class="btn" href="#order">Place Order</a>
+<h1>Order Anything in Mundra</h1>
+<p>Groceries • Food • Medicines • Parcels Delivered Fast</p>
+<a href="#order" class="btn">Place Order</a>
 </section>
 
 <section class="section" id="services">
@@ -213,11 +263,11 @@ font-size:34px;
 
 <div class="card">
 <h3>💊 Medicine Delivery</h3>
-<p>Fast medical delivery service.</p>
+<p>Fast medicine delivery service.</p>
 </div>
 
 <div class="card">
-<h3>🚚 Parcel Delivery</h3>
+<h3>📦 Parcel Delivery</h3>
 <p>Send parcels anywhere in Mundra.</p>
 </div>
 
@@ -237,91 +287,88 @@ font-size:34px;
 <section class="section" id="order">
 <h2 class="section-title">Place Order</h2>
 
-<form onsubmit="placeOrder(event)">
-<input type="text" id="name" placeholder="Full Name" required>
-<input type="tel" id="phone" placeholder="Mobile Number" required>
-<input type="text" id="product" placeholder="Product Name" required>
-<input type="number" id="qty" placeholder="Quantity" required>
-<textarea id="address" placeholder="Delivery Address" required></textarea>
-
-<button type="submit">Submit Order</button>
-
-<p id="orderMsg" style="margin-top:15px;"></p>
+<form>
+<input type="text" placeholder="Full Name">
+<input type="tel" placeholder="Mobile Number">
+<input type="text" placeholder="Product Name">
+<input type="number" placeholder="Quantity">
+<textarea placeholder="Delivery Address"></textarea>
+<button>Submit Order</button>
 </form>
+</section>
+
+<section class="section">
+<h2 class="section-title">Delivery Charges</h2>
+
+<div class="info-box">
+<p>0 - 3 KM : ₹30</p>
+<p>3 - 6 KM : ₹50</p>
+<p>6 - 10 KM : ₹80</p>
+</div>
 </section>
 
 <section class="section" id="partner">
 <h2 class="section-title">Become Delivery Partner</h2>
 
-<form onsubmit="partnerRegister(event)">
-<input type="text" id="partnerName" placeholder="Full Name" required>
-<input type="tel" id="partnerPhone" placeholder="Mobile Number" required>
-<input type="text" placeholder="Vehicle Type" required>
-
-<button type="submit">Register</button>
-
-<p id="partnerMsg" style="margin-top:15px;"></p>
+<form>
+<input type="text" placeholder="Full Name">
+<input type="tel" placeholder="Mobile Number">
+<input type="text" placeholder="Vehicle Type">
+<button>Register</button>
 </form>
+</section>
+
+<section class="section">
+<h2 class="section-title">Customer Reviews</h2>
+
+<div class="grid">
+
+<div class="card">
+⭐⭐⭐⭐⭐
+<p>Very fast service in Mundra.</p>
+</div>
+
+<div class="card">
+⭐⭐⭐⭐⭐
+<p>Easy ordering and quick delivery.</p>
+</div>
+
+<div class="card">
+⭐⭐⭐⭐⭐
+<p>Trusted local delivery platform.</p>
+</div>
+
+</div>
 </section>
 
 <section class="section" id="about">
 <h2 class="section-title">About Us</h2>
 
-<div class="about">
+<div class="info-box">
 <p>
-Local Delivery Mundra is a local delivery platform serving
-Mundra city. We help customers order groceries, food,
-medicines, water and parcels quickly from nearby shops.
+Local Delivery Mundra helps customers order groceries,
+food, medicines, water and parcels from nearby shops
+with fast delivery service across Mundra.
 </p>
 </div>
 </section>
 
-<section class="section" id="contact">
-<h2 class="section-title">Contact Us</h2>
-
-<div class="about">
-<p><strong>Phone:</strong> +91 9106301219</p>
-<p><strong>Email:</strong> turkfaizmohmad@gmail.com</p>
-<p><strong>Location:</strong> Mundra, Kutch, Gujarat</p>
-</div>
-</section>
-
-<a class="whatsapp"
-href="https://wa.me/919106301219"
-target="_blank">
-WhatsApp Order
-</a>
-
 <footer>
-<p>© 2026 Local Delivery Mundra. All Rights Reserved.</p>
+<h3>Local Delivery Mundra</h3>
+<p>Fast • Reliable • Trusted</p>
+<p>© 2026 All Rights Reserved</p>
 </footer>
 
-<script>
+<a class="whatsapp" href="https://wa.me/919106301219">WhatsApp</a>
 
-function placeOrder(e){
-e.preventDefault();
+<a class="call" href="tel:+919106301219">Call</a>
 
-let name=document.getElementById("name").value;
-let product=document.getElementById("product").value;
-
-document.getElementById("orderMsg").innerHTML=
-"✅ Thank you "+name+
-"! Your order for "+product+
-" has been received.";
-
-}
-
-function partnerRegister(e){
-e.preventDefault();
-
-let name=document.getElementById("partnerName").value;
-
-document.getElementById("partnerMsg").innerHTML=
-"✅ Thank you "+name+
-"! We will contact you soon.";
-}
-
-</script>
+<div class="bottom-nav">
+<a href="#home">🏠 Home</a>
+<a href="#order">🛒 Order</a>
+<a href="#partner">🚚 Partner</a>
+<a href="#contact">📞 Contact</a>
+</div>
 
 </body>
 </html>
