@@ -1,74 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Local Delivery Mundra</title>
-
-<style>
+<title>Local Delivery Mundra</title><link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"><style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
-scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#f5f7fa;
-color:#333;
+background:#f5f7fb;
+color:#222;
 }
 
 header{
+position:sticky;
+top:0;
 background:#fff;
-padding:15px 20px;
+padding:12px 20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-position:sticky;
-top:0;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
 z-index:999;
-box-shadow:0 2px 10px rgba(0,0,0,.1);
 }
 
-.logo{
-font-size:22px;
-font-weight:bold;
-color:#0077ff;
+.logo img{
+height:60px;
 }
 
 nav a{
 text-decoration:none;
-margin-left:15px;
-color:#333;
-font-weight:bold;
+margin:0 10px;
+color:#222;
+font-weight:600;
 }
 
 .hero{
-background:linear-gradient(135deg,#00c6ff,#0072ff);
+background:linear-gradient(135deg,#0072ff,#00c6ff);
 color:#fff;
-padding:100px 20px;
+padding:80px 20px;
 text-align:center;
+}
+
+.hero img{
+width:240px;
+max-width:90%;
+margin-bottom:20px;
 }
 
 .hero h1{
 font-size:42px;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
 .hero p{
+max-width:700px;
+margin:auto;
 font-size:18px;
-margin-bottom:25px;
 }
 
 .btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 28px;
 background:#fff;
 color:#0072ff;
-padding:14px 30px;
 border-radius:30px;
 text-decoration:none;
-font-weight:bold;
-display:inline-block;
+font-weight:700;
 }
 
 .section{
@@ -77,9 +80,8 @@ max-width:1200px;
 margin:auto;
 }
 
-.section-title{
+.section h2{
 text-align:center;
-font-size:32px;
 margin-bottom:30px;
 }
 
@@ -93,7 +95,7 @@ gap:20px;
 background:#fff;
 padding:20px;
 border-radius:15px;
-box-shadow:0 4px 10px rgba(0,0,0,.08);
+box-shadow:0 4px 12px rgba(0,0,0,.08);
 }
 
 .card h3{
@@ -105,12 +107,10 @@ form{
 background:#fff;
 padding:25px;
 border-radius:15px;
-box-shadow:0 4px 10px rgba(0,0,0,.08);
+box-shadow:0 4px 12px rgba(0,0,0,.08);
 }
 
-input,
-textarea,
-select{
+input,select,textarea{
 width:100%;
 padding:12px;
 margin:10px 0;
@@ -121,237 +121,135 @@ border-radius:8px;
 button{
 background:#0072ff;
 color:white;
-padding:12px 25px;
 border:none;
+padding:12px 25px;
 border-radius:8px;
 cursor:pointer;
 }
 
-button:hover{
-opacity:.9;
-}
-
-.review{
-background:white;
-padding:20px;
-border-radius:15px;
-box-shadow:0 4px 10px rgba(0,0,0,.08);
-}
-
-.footer{
-background:#111;
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
 color:white;
-text-align:center;
-padding:30px;
-margin-top:50px;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+z-index:999;
 }
 
-.bottom-nav{
-display:none;
+footer{
+background:#0d1b2a;
+color:white;
+padding:40px 20px;
+text-align:center;
+margin-top:40px;
 }
 
 @media(max-width:768px){
-
 nav{
 display:none;
 }
 
 .hero h1{
-font-size:32px;
-}
-
-.bottom-nav{
-display:flex;
-justify-content:space-around;
-position:fixed;
-bottom:0;
-left:0;
-width:100%;
-background:white;
-padding:12px;
-box-shadow:0 -2px 10px rgba(0,0,0,.1);
-z-index:999;
-}
-
-.bottom-nav a{
-text-decoration:none;
-color:#333;
-font-size:13px;
-font-weight:bold;
+font-size:30px;
 }
 }
-</style>
-</head>
-<body>
-
-<header>
-<div class="logo">🚚 Local Delivery Mundra</div>
-
-<nav>
-<a href="#home">Home</a>
+</style></head><body><header>
+<div class="logo">
+<img src="logo.png" alt="Local Delivery Mundra">
+</div><nav>
 <a href="#services">Services</a>
 <a href="#order">Order</a>
 <a href="#partner">Partner</a>
-<a href="#query">Query</a>
+<a href="#shop">Shop</a>
+<a href="#contact">Contact</a>
 </nav>
-</header>
+</header><section class="hero">
+<img src="logo.png" alt="Logo"><h1>Local Delivery Mundra</h1><p>
+Fast, Reliable & Affordable Local Delivery Service
+for Grocery, Food, Medicine, Water and Parcels.
+</p><a href="#order" class="btn">Place Order</a>
 
-<section class="hero" id="home">
-<h1>Local Delivery Mundra</h1>
-<p>Mundra's Fast & Reliable Local Delivery Platform</p>
-<a href="#order" class="btn">Place Order</a>
-</section>
-
-<section class="section" id="services">
-<h2 class="section-title">Our Services</h2>
-
-<div class="grid">
-
-<div class="card">
+</section><section class="section" id="services">
+<h2>Our Services</h2><div class="grid"><div class="card">
 <h3>🛒 Grocery Delivery</h3>
 <p>Daily essentials delivered quickly.</p>
-</div>
-
-<div class="card">
+</div><div class="card">
 <h3>🍔 Food Delivery</h3>
-<p>Food delivery from local restaurants.</p>
-</div>
-
-<div class="card">
+<p>Food from local restaurants.</p>
+</div><div class="card">
 <h3>💊 Medicine Delivery</h3>
-<p>Fast medicine delivery service.</p>
-</div>
-
-<div class="card">
+<p>Fast medicine delivery.</p>
+</div><div class="card">
 <h3>📦 Parcel Delivery</h3>
-<p>Send parcels across Mundra.</p>
-</div>
-
-<div class="card">
+<p>Safe parcel transport.</p>
+</div><div class="card">
 <h3>💧 Water Delivery</h3>
-<p>Water bottle and can delivery.</p>
-</div>
-
-<div class="card">
+<p>Water can and bottle delivery.</p>
+</div><div class="card">
 <h3>🏪 Local Shops</h3>
 <p>Support local businesses.</p>
-</div>
-
-</div>
-</section>
-
-<section class="section">
-<h2 class="section-title">Delivery Charges</h2>
-
-<div class="grid">
-<div class="card"><h3>0-3 KM</h3><p>₹30</p></div>
-<div class="card"><h3>3-6 KM</h3><p>₹50</p></div>
-<div class="card"><h3>6-10 KM</h3><p>₹80</p></div>
-</div>
-</section>
-
-<section class="section" id="order">
-<h2 class="section-title">Place Order</h2>
-
-<form>
+</div></div>
+</section><section class="section">
+<h2>Delivery Charges</h2><div class="grid"><div class="card">
+<h3>0 - 3 KM</h3>
+<p>₹30</p>
+</div><div class="card">
+<h3>3 - 6 KM</h3>
+<p>₹50</p>
+</div><div class="card">
+<h3>6 - 10 KM</h3>
+<p>₹80</p>
+</div></div>
+</section><section class="section" id="order">
+<h2>Place Order</h2><form>
 <input type="text" placeholder="Full Name">
 <input type="tel" placeholder="Mobile Number">
-<input type="text" placeholder="Product Name">
-<input type="number" placeholder="Quantity">
+<input type="text" placeholder="Item Name">
 <textarea placeholder="Delivery Address"></textarea>
-<button type="submit">Submit Order</button>
+<button>Submit Order</button>
 </form>
-</section>
-
-<section class="section" id="partner">
-<h2 class="section-title">Become Delivery Partner</h2>
-
-<form>
+</section><section class="section" id="partner">
+<h2>Become Delivery Partner</h2><form>
 <input type="text" placeholder="Full Name">
 <input type="tel" placeholder="Mobile Number">
 <input type="text" placeholder="Vehicle Type">
-<select>
-<option>Choose Vehicle</option>
-<option>Bike</option>
-<option>Scooter</option>
-<option>Cycle</option>
-<option>Car</option>
-</select>
-<button type="submit">Register Now</button>
+<button>Register Partner</button>
 </form>
-</section>
-
-<section class="section" id="query">
-<h2 class="section-title">Query & Enquiry</h2>
-
-<form>
-<input type="text" placeholder="Your Name">
+</section><section class="section" id="shop">
+<h2>Shop Registration</h2><form>
+<input type="text" placeholder="Shop Name">
+<input type="text" placeholder="Owner Name">
 <input type="tel" placeholder="Mobile Number">
-<input type="email" placeholder="Email Address">
-
-<select>
-<option>Select Enquiry Type</option>
-<option>Customer Support</option>
-<option>Shop Registration</option>
-<option>Delivery Partner</option>
-<option>Business Partnership</option>
-</select>
-
-<textarea placeholder="Write Your Query"></textarea>
-
-<button type="submit">Submit Enquiry</button>
+<input type="text" placeholder="Shop Address">
+<button>Register Shop</button>
 </form>
-</section>
-
-<section class="section">
-<h2 class="section-title">Customer Reviews</h2>
-
-<div class="grid">
-
-<div class="review">
+</section><section class="section">
+<h2>Customer Reviews</h2><div class="grid"><div class="card">
 ⭐⭐⭐⭐⭐
-<p>Fast delivery and excellent service.</p>
-</div>
-
-<div class="review">
+<p>Very fast delivery service.</p>
+</div><div class="card">
 ⭐⭐⭐⭐⭐
 <p>Best local delivery platform in Mundra.</p>
-</div>
-
-<div class="review">
+</div><div class="card">
 ⭐⭐⭐⭐⭐
-<p>Easy ordering and quick response.</p>
-</div>
-
-</div>
-</section>
-
-<section class="section">
-<h2 class="section-title">About Us</h2>
-
-<div class="card">
-<p>
-Local Delivery Mundra is a platform connecting customers,
-shops and delivery partners across Mundra.
-We aim to provide fast, reliable and affordable delivery services.
-</p>
-</div>
-</section>
-
-<footer class="footer">
-<h2>Local Delivery Mundra</h2>
-<p>Mundra's Local Delivery Platform</p>
-<p>Groceries • Food • Medicines • Parcels</p>
+<p>Easy ordering and good support.</p>
+</div></div>
+</section><section class="section" id="contact">
+<h2>Query & Enquiry</h2><form>
+<input type="text" placeholder="Your Name">
+<input type="tel" placeholder="Mobile Number">
+<textarea placeholder="Write Your Query"></textarea>
+<button>Submit Query</button>
+</form>
+</section><footer>
+<img src="logo.png" width="180">
+<p>Delivering Happiness Across Mundra</p>
 <p>© 2026 Local Delivery Mundra</p>
-</footer>
-
-<div class="bottom-nav">
-<a href="#home">🏠 Home</a>
-<a href="#services">📦 Services</a>
-<a href="#order">🛒 Order</a>
-<a href="#partner">🚚 Partner</a>
-<a href="#query">📞 Query</a>
-</div>
-
-</body>
+</footer><a href="https://wa.me/919106301219" class="whatsapp">
+WhatsApp Order
+</a></body>
 </html>
