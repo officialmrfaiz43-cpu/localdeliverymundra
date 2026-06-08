@@ -14,8 +14,8 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#f5f7fb;
-color:#222;
+background:#f4f6f9;
+color:#333;
 }
 
 header{
@@ -25,68 +25,77 @@ text-align:center;
 box-shadow:0 2px 10px rgba(0,0,0,.1);
 }
 
-header img{
-width:180px;
-height:180px;
+.logo{
+width:160px;
+height:160px;
 border-radius:50%;
-object-fit:cover;
-border:5px solid #0072ff;
-box-shadow:0 4px 15px rgba(0,0,0,.2);
+background:#fff;
+padding:10px;
+border:4px solid #0d6efd;
+box-shadow:0 4px 20px rgba(0,0,0,.25);
+object-fit:contain;
 }
 
 .hero{
-background:linear-gradient(135deg,#00c6ff,#0072ff);
+background:linear-gradient(135deg,#007bff,#00d4ff);
 color:#fff;
 text-align:center;
-padding:50px 20px;
+padding:60px 20px;
 }
 
 .hero h1{
-font-size:32px;
+font-size:36px;
 margin-bottom:10px;
 }
 
 .hero p{
+font-size:18px;
 margin-bottom:20px;
 }
 
 .btn{
 display:inline-block;
+padding:14px 28px;
 background:#25D366;
 color:#fff;
 text-decoration:none;
-padding:12px 25px;
 border-radius:30px;
 font-weight:bold;
+box-shadow:0 4px 10px rgba(0,0,0,.2);
 }
 
 .section{
-padding:30px 15px;
+padding:40px 15px;
 max-width:1000px;
 margin:auto;
 }
 
 .section h2{
-margin-bottom:15px;
 text-align:center;
+margin-bottom:20px;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:15px;
 }
 
 .card{
 background:#fff;
-padding:15px;
+padding:18px;
 border-radius:12px;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
+box-shadow:0 2px 10px rgba(0,0,0,.1);
 }
 
-form input,
-form textarea,
-form select{
+form{
+background:#fff;
+padding:20px;
+border-radius:12px;
+box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+input,textarea{
 width:100%;
 padding:12px;
 margin:8px 0;
@@ -95,17 +104,28 @@ border-radius:8px;
 }
 
 button{
-background:#0072ff;
+width:100%;
+padding:12px;
+background:#0d6efd;
 color:#fff;
 border:none;
-padding:12px 20px;
 border-radius:8px;
+font-size:16px;
 cursor:pointer;
-width:100%;
 }
 
-button:hover{
-background:#0057cc;
+.review{
+background:#fff;
+padding:15px;
+border-radius:12px;
+margin-bottom:10px;
+box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.map{
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 2px 10px rgba(0,0,0,.1);
 }
 
 footer{
@@ -113,20 +133,35 @@ background:#111;
 color:#fff;
 text-align:center;
 padding:20px;
-margin-top:20px;
+margin-top:30px;
 }
 
 .whatsapp{
 position:fixed;
-right:15px;
-bottom:15px;
+right:20px;
+bottom:20px;
 background:#25D366;
 color:#fff;
 padding:14px 20px;
 border-radius:50px;
 text-decoration:none;
 font-weight:bold;
-box-shadow:0 4px 10px rgba(0,0,0,.2);
+z-index:999;
+box-shadow:0 4px 15px rgba(0,0,0,.3);
+}
+
+.callbtn{
+position:fixed;
+left:20px;
+bottom:20px;
+background:#007bff;
+color:#fff;
+padding:14px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+z-index:999;
+box-shadow:0 4px 15px rgba(0,0,0,.3);
 }
 </style>
 </head>
@@ -134,132 +169,133 @@ box-shadow:0 4px 10px rgba(0,0,0,.2);
 <body>
 
 <header>
-<img src="logo.png" alt="Local Delivery Mundra Logo">
+<img src="logo.png" alt="Local Delivery Mundra" class="logo">
 </header>
 
 <section class="hero">
 <h1>Local Delivery Mundra</h1>
 <p>Fast, Reliable & Trusted Local Delivery Service in Mundra</p>
-<a class="btn" href="https://wa.me/919726301219">WhatsApp Order</a>
+
+<a href="https://wa.me/919726301219?text=Hello%20Local%20Delivery%20Mundra" class="btn">
+WhatsApp Order
+</a>
 </section>
 
 <section class="section">
 <h2>Our Services</h2>
 
 <div class="grid">
+
 <div class="card">🛒 Grocery Delivery</div>
 <div class="card">🍔 Food Delivery</div>
 <div class="card">💊 Medicine Delivery</div>
 <div class="card">📦 Parcel Delivery</div>
 <div class="card">💧 Water Delivery</div>
 <div class="card">🏪 Local Shop Support</div>
+
 </div>
 </section>
 
 <section class="section">
 <h2>Place Order</h2>
 
-<div class="card">
-<form>
-<input type="text" placeholder="Full Name">
-<input type="tel" placeholder="Mobile Number">
-<input type="text" placeholder="Pickup Address">
-<input type="text" placeholder="Delivery Address">
-<button type="button">Submit Order</button>
+<form action="https://wa.me/919726301219" target="_blank">
+<input type="text" placeholder="Full Name" required>
+<input type="tel" placeholder="Mobile Number" required>
+<input type="text" placeholder="Pickup Address" required>
+<input type="text" placeholder="Delivery Address" required>
+<button type="submit">Submit Order</button>
 </form>
-</div>
 </section>
 
 <section class="section">
 <h2>Shop Registration</h2>
 
-<div class="card">
-<form>
-<input type="text" placeholder="Shop Name">
-<input type="text" placeholder="Owner Name">
-<input type="tel" placeholder="Mobile Number">
-<textarea placeholder="Shop Address"></textarea>
-<button type="button">Register Shop</button>
-</form>
-</div>
-</section>
-
-<section class="section">
-<h2>Shop Registration</h2>
-
+<div style="text-align:center;">
 <a href="https://form.svhrt.com/6a2645a923230870298a7c1e"
 target="_blank"
 class="btn">
 Register Your Shop
 </a>
+</div>
+
 </section>
 
 <section class="section">
 <h2>Delivery Partner Registration</h2>
 
+<div style="text-align:center;">
 <a href="https://form.svhrt.com/6a2646ed9e1c39ed8fb41191"
 target="_blank"
 class="btn">
 Become Delivery Partner
 </a>
+</div>
+
 </section>
 
 <section class="section">
 <h2>Query & Enquiry</h2>
 
+<div style="text-align:center;">
 <a href="https://form.svhrt.com/6a2647d003c6fd9c422cd2e8"
 target="_blank"
 class="btn">
 Submit Enquiry
 </a>
-</section>
-
-<select>
-<option>Select Vehicle</option>
-<option>Bike</option>
-<option>Scooty</option>
-<option>Cycle</option>
-</select>
-
-<button type="button">Apply Now</button>
-</form>
 </div>
-</section>
 
-<section class="section">
-<h2>Query & Enquiry</h2>
-
-<div class="card">
-<form>
-<input type="text" placeholder="Your Name">
-<input type="tel" placeholder="Mobile Number">
-<textarea placeholder="Your Query"></textarea>
-<button type="button">Send Enquiry</button>
-</form>
-</div>
 </section>
 
 <section class="section">
 <h2>Customer Reviews</h2>
 
-<div class="card">⭐⭐⭐⭐⭐ Excellent service in Mundra.</div>
-<br>
-<div class="card">⭐⭐⭐⭐⭐ Fast and reliable delivery.</div>
+<div class="review">
+⭐⭐⭐⭐⭐ Excellent service in Mundra.
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐ Fast and reliable delivery.
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐ Trusted local delivery partner.
+</div>
+
 </section>
 
 <section class="section">
 <h2>About Us</h2>
 
 <div class="card">
-Local Delivery Mundra helps customers, shops and delivery partners connect through a trusted local delivery network.
+Local Delivery Mundra provides fast and trusted delivery services across Mundra. We help customers, shops and delivery partners connect easily through one platform.
 </div>
+
+</section>
+
+<section class="section">
+<h2>Location</h2>
+
+<div class="map">
+<iframe
+src="https://maps.google.com/maps?q=Mundra&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="300"
+style="border:0;">
+</iframe>
+</div>
+
 </section>
 
 <footer>
-© 2026 Local Delivery Mundra | All Rights Reserved
+© 2026 Local Delivery Mundra<br>
+Mundra, Kutch, Gujarat<br>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/919726301219">
+<a class="callbtn" href="tel:+919106301219">Call</a>
+
+<a class="whatsapp"
+href="https://wa.me/919726301219">
 WhatsApp
 </a>
 
