@@ -163,9 +163,88 @@ font-weight:bold;
 <section class="hero">
 <h1>Local Delivery Mundra</h1>
 <p>Fast, Reliable & Trusted Local Delivery Service</p>
+<!-- ================= ORDER NOW ================= -->
+<section id="order" style="padding:50px 20px;background:#f8f9fa;">
 
-<a href="https://wa.me/919106301219" class="btn">
-WhatsApp Order
+<div style="max-width:600px;margin:auto;background:#fff;padding:30px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.1);">
+
+<h2 style="text-align:center;color:#0d6efd;margin-bottom:25px;">
+📦 Order Now
+</h2>
+
+<form onsubmit="sendOrder();return false;">
+
+<input
+type="text"
+id="name"
+placeholder="👤 Your Name"
+required
+style="width:100%;padding:15px;margin-bottom:15px;border:1px solid #ddd;border-radius:10px;font-size:16px;">
+
+<input
+type="tel"
+id="mobile"
+placeholder="📱 Mobile Number"
+required
+style="width:100%;padding:15px;margin-bottom:15px;border:1px solid #ddd;border-radius:10px;font-size:16px;">
+
+<input
+type="text"
+id="hotel"
+placeholder="🏨 Hotel / Shop Name"
+style="width:100%;padding:15px;margin-bottom:15px;border:1px solid #ddd;border-radius:10px;font-size:16px;">
+
+<input
+type="text"
+id="delivery"
+placeholder="📍 Delivery Address"
+required
+style="width:100%;padding:15px;margin-bottom:15px;border:1px solid #ddd;border-radius:10px;font-size:16px;">
+
+<textarea
+id="item"
+placeholder="📦 Item Details (Food, Grocery, Medicine, Parcel...)"
+rows="4"
+style="width:100%;padding:15px;margin-bottom:20px;border:1px solid #ddd;border-radius:10px;font-size:16px;"></textarea>
+
+<button
+type="submit"
+style="width:100%;padding:16px;background:#25D366;color:white;border:none;border-radius:12px;font-size:18px;font-weight:bold;cursor:pointer;">
+🚚 Place Order
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<script>
+function sendOrder(){
+
+let name=document.getElementById("name").value;
+let mobile=document.getElementById("mobile").value;
+let hotel=document.getElementById("hotel").value;
+let delivery=document.getElementById("delivery").value;
+let item=document.getElementById("item").value;
+
+let message=
+"📦 *NEW ORDER*%0A%0A"+
+"👤 Name: "+name+"%0A"+
+"📱 Mobile: "+mobile+"%0A"+
+"🏨 Hotel/Shop: "+hotel+"%0A"+
+"📍 Delivery Address: "+delivery+"%0A"+
+"📦 Item Details: "+item;
+
+window.open(
+"https://wa.me/919106301219?text="+message,
+"_blank"
+);
+
+}
+</script>
+<!-- ================= END ORDER NOW ================= -->
+
 </a>
 </section>
 
