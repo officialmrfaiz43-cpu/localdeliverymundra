@@ -199,6 +199,10 @@ type="text"
 id="delivery"
 placeholder="📍 Delivery Address"
 required
+<button type="button" onclick="getLocation()"
+style="width:100%;padding:15px;background:#0d6efd;color:#fff;border:none;border-radius:10px;margin-bottom:15px;">
+📍 Use Current Location
+</button>
 style="width:100%;padding:15px;margin-bottom:15px;border:1px solid #ddd;border-radius:10px;font-size:16px;">
 
 <textarea
@@ -253,10 +257,15 @@ window.open(
 
 <div class="grid">
 <div class="card">🛒 Grocery Delivery</div>
-<div class="card">🍔 Food Delivery</div>
+<a href="food.html" style="text-decoration:none;color:#333;">
+    <div class="card">
+        🍔 Food Delivery
+    </div>
+</a>
 <div class="card">💊 Medicine Delivery</div>
 <div class="card">📦 Parcel Delivery</div>
-<div class="card">💧 Water Delivery</div>
+<div class="card">🚢 Mundra Port Services</div>
+<div class="card">✈️ Airport Pickup & Drop</div>
 <div class="card">🏪 Local Shop Support</div>
 </div>
 </section>
@@ -343,6 +352,22 @@ style="border:0;border-radius:12px;">
 <a href="https://wa.me/919106301219" class="whatsapp">
 WhatsApp
 </a>
+<script>
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            document.getElementById("delivery").value =
+                "https://maps.google.com/?q=" +
+                position.coords.latitude + "," +
+                position.coords.longitude;
+        }, function() {
+            alert("Please allow location access.");
+        });
+    } else {
+        alert("Geolocation not supported.");
+    }
+}
+</script>
 
 </body>
 </html>
