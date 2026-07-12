@@ -199,10 +199,23 @@ type="text"
 id="delivery"
 placeholder="📍 Delivery Address"
 required
-<button type="button" onclick="getLocation()"
-style="width:100%;padding:15px;background:#0d6efd;color:#fff;border:none;border-radius:10px;margin-bottom:15px;">
-📍 Use Current Location
+<div style="display:flex;gap:10px;margin-bottom:15px;">
+
+<input
+type="text"
+id="delivery"
+placeholder="📍 Delivery Address"
+required
+style="flex:1;padding:15px;border:1px solid #ddd;border-radius:10px;font-size:16px;">
+
+<button
+type="button"
+onclick="getLocation()"
+style="width:55px;height:55px;border:none;border-radius:10px;background:#0d6efd;color:white;font-size:24px;cursor:pointer;">
+📍
 </button>
+
+</div>
 style="width:100%;padding:15px;margin-bottom:15px;border:1px solid #ddd;border-radius:10px;font-size:16px;">
 
 <textarea
@@ -353,21 +366,24 @@ style="border:0;border-radius:12px;">
 WhatsApp
 </a>
 <script>
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-            document.getElementById("delivery").value =
-                "https://maps.google.com/?q=" +
-                position.coords.latitude + "," +
-                position.coords.longitude;
-        }, function() {
-            alert("Please allow location access.");
-        });
-    } else {
-        alert("Geolocation not supported.");
-    }
+function getLocation(){
+
+if(navigator.geolocation){
+
+navigator.geolocation.getCurrentPosition(function(position){
+
+document.getElementById("delivery").value=
+position.coords.latitude+","+position.coords.longitude;
+
+});
+
+}else{
+
+alert("Location not supported");
+
 }
-</script>
+
+}
 
 </body>
 </html>
